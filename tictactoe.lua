@@ -1,9 +1,22 @@
 
-local new_board = {{" ", "o", "x"}, {"x", "o", " "}, {"x", "o", " "}
+local new_board = {{" ", "o", "x"}, {"x", "o", " "}, {"x", "o", " "}}
 
-
+  
+  
 function put_x(board, row, col)
-   board[row][col] = "x"
+   
+   
+ 
+   if board[row][col] == " " then
+     
+     
+     board[row][col] = "x"
+     
+     
+     
+     
+   end
+   
 end
 
 function print_board(board)
@@ -32,7 +45,7 @@ end
 
 
 
-
+fdkfjoadjflkdjlfdslfsdjalfjdsalfjasklfjkasjfl
 
 
 
@@ -54,7 +67,7 @@ while not game_over do
    --returns 1 if player one wins, 2 if player 2, and false if nobody
    winner = check_winner()
 
-   
+  
    
 
 
