@@ -1,10 +1,20 @@
 
-local new_board = {{" ", "o", "x"}, {"x", "o", " "}, {"x", "o", " "}
+local new_board = {{" ", "o", "x"}, {"x", "o", " "}, {"x", "o", " "}}
 
 
 function put_x(board, row, col)
    board[row][col] = "x"
 end
+
+function put_o(board, row, col)
+  board[row][row][col] = "o"
+  end
+
+function play_turn(player_turn)
+  
+  end
+
+function check_winner()
 
 function print_board(board)
 
