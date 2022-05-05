@@ -31,18 +31,12 @@ function print_board(board)
 
 	end
 end
+shfsdkjdlkdjsfld = false
+if shfsdkjdlkdjsfld== true then
+  print("weee")
+  elseif print("reeeech") then
 
-
-local apple = {1, 2, 1}
-
-local banana = apple
-
-
-banana[1] = 2
-
-apple[2] = 3
-
-print(apple[1], banana[2])
+end
 
 
 
