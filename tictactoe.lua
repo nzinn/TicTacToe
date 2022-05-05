@@ -4,7 +4,7 @@ local new_board = {{" ", "o", "x"}, {"x", "o", " "}, {"x", "o", " "}}
 
 
 
-
+this is a test
 
 
 function put_x(board, row, col)
