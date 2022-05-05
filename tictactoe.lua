@@ -36,22 +36,31 @@ if shfsdkjdlkdjsfld== true then
   print("weee")
   elseif print("reeeech") then
 
+
 end
 
 
 
 
+local player_turn = 1
+
+
+local game_over = false
+
+while not game_over do
+
+
+   
+   play_turn(player_turn)
 
 
 
+   --returns 1 if player one wins, 2 if player 2, and false if nobody
+   winner = check_winner()
+
+   
+   
 
 
-
-
-
-
-
-
-
-
+end
 
