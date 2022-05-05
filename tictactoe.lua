@@ -26,13 +26,13 @@ function print_board(board)
 
 	end
 end
-shfsdkjdlkdjsfld = false
-if shfsdkjdlkdjsfld== true then
-  print("weee")
-  elseif print("reeeech") then
 
 
-end
+
+
+
+
+
 
 
 
@@ -47,7 +47,7 @@ while not game_over do
 
    
    play_turn(player_turn)
-slkjsdkfjaslkfjkdsljfklsajfdsjfkdsjfoajo
+
 
 
    --returns 1 if player one wins, 2 if player 2, and false if nobody
@@ -59,4 +59,3 @@ slkjsdkfjaslkfjkdsljfklsajfdsjfkdsjfoajo
 
 end
 
-im awsome
