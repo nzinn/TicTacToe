@@ -31,7 +31,13 @@ function print_board(board)
 
 	end
 end
+shfsdkjdlkdjsfld = false
+if shfsdkjdlkdjsfld== true then
+  print("weee")
+  elseif print("reeeech") then
 
+
+end
 
 
 
