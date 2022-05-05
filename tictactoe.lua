@@ -1,10 +1,5 @@
 
-local new_board = {{" ", "o", "x"}, {"x", "o", " "}, {"x", "o", " "}}
-
-
-
-
-
+local new_board = {{" ", "o", "x"}, {"x", "o", " "}, {"x", "o", " "}
 
 
 function put_x(board, row, col)
@@ -52,7 +47,7 @@ while not game_over do
 
    
    play_turn(player_turn)
-
+slkjsdkfjaslkfjkdsljfklsajfdsjfkdsjfoajo
 
 
    --returns 1 if player one wins, 2 if player 2, and false if nobody
