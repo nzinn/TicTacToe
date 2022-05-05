@@ -7,7 +7,7 @@ function put_x(board, row, col)
 end
 
 function put_o(board, row, col)
-  board[row][row][col] = "o"
+  board[row][col] = "o"
   end
 
 function play_turn(player_turn)
