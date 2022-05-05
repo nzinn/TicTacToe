@@ -33,31 +33,28 @@ function print_board(board)
 end
 
 
-local apple = {1, 2, 1}
-
-local banana = apple
-
-
-banana[1] = 2
-
-apple[2] = 3
-
-print(apple[1], banana[2])
 
 
 
+local player_turn = 1
+
+
+local game_over = false
+
+while not game_over do
+
+
+   
+   play_turn(player_turn)
 
 
 
+   --returns 1 if player one wins, 2 if player 2, and false if nobody
+   winner = check_winner()
+
+   
+   
 
 
-
-
-
-
-
-
-
-
-
+end
 
