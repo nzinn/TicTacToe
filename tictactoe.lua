@@ -19,6 +19,16 @@ function put_x(board, row, col)
    
 end
 
+function put_o(board, row, col)
+  board[row][col] = "o"
+  end
+
+function play_turn(player_turn)
+  
+  end
+
+function check_winner()
+
 function print_board(board)
 
 	for row  = 1, 3 do 
