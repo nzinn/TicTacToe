@@ -46,9 +46,6 @@ end
 
 
 
-
-
-
 local player_turn = 1
 
 
@@ -63,8 +60,8 @@ while not game_over do
 
 
 
-   --returns 1 if player one wins, 2 if player 2, and false if nobody
-   winner = check_winner()
+   --returns 1 if player one wins, 2 if player 2, and false if nobody wins
+   game_over = check_winner()
 
   
    
