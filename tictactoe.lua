@@ -20,7 +20,9 @@ end
 
 
 function play_turn(player_turn)
-  end
+   print("player " .. player_turn .. ", it's you're turn!")
+
+end
 
 
 
