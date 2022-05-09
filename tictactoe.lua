@@ -1,7 +1,10 @@
 
 local new_board = {{" ", "o", "x"}, {"x", "o", " "}, {"x", "o", " "}}
 
+function print_instructions()
+  print("this is tic tac toe you can either be xs or os,\n if you get three xs or os in a row you win")
   
+  end
   
 function put_x(board, row, col)
    if board[row][col] == " " then
@@ -10,7 +13,11 @@ function put_x(board, row, col)
 end
 
 function put_o(board, row, col)
-  board[row][col] = "o"
+  if board[row][col] == " " then
+    
+    
+    board[row][col] = "o"
+  end
 end
 
 
@@ -58,7 +65,8 @@ end
 local player_turn = 1
 
 
-local game_over = false
+local game_over = true
+
 
 while not game_over do
 
