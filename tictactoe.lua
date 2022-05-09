@@ -4,50 +4,40 @@ local new_board = {{" ", "o", "x"}, {"x", "o", " "}, {"x", "o", " "}}
   
   
 function put_x(board, row, col)
-   
-   
- 
    if board[row][col] == " " then
-     
-     
-     board[row][col] = "x"
-     
-     
-     
-     
-   end
-   
+          board[row][col] = "x"
+       end
 end
 
 function put_o(board, row, col)
   board[row][col] = "o"
-  end
+end
+
 
 function play_turn(player_turn)
   
-  end
+end
+
 
 function check_winner()
+end
 
 function print_board(board)
+   for row  = 1, 3 do
+      for col = 1, 3 do
+	 io.write(board[row][col])
+	 if col ~= 3 then
+	    io.write("|")
+	 end
+      end
 
-	for row  = 1, 3 do 
-		for col = 1, 3 do
-			io.write(board[row][col])
-			if col ~= 3 then
-				io.write("|")
-			end
-
-		end
-		
-		io.write("\n")
-		if row ~= 3 then
-			io.write("-----")
-		end
-
-		io.write("\n")
-
-	end
+      io.write("\n")
+      if row ~= 3 then
+	 io.write("-----")
+      end
+      
+      io.write("\n")
+   end
 end
 
 
@@ -55,7 +45,6 @@ end
 
 
 
-fdkfjoadjflkdjlfdslfsdjalfjdsalfjasklfjkasjfl
 
 
 
