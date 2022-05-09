@@ -24,6 +24,14 @@ end
 
 
 function print_winner(player)
+  
+  if player == 1 then
+    print("player one won please stand on the podium")
+  elseif player == 2 then
+    print("player two won please stand on the podium")
+  end
+  
+
 
 end
 
