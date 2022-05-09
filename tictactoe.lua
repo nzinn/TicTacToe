@@ -2,7 +2,7 @@
 local new_board = {{" ", "o", "x"}, {"x", "o", " "}, {"x", "o", " "}}
 
 function print_instructions()
-  print("this is tic tac toe you can either be xs or os,\n if you get three xs or os in a row you win")
+  print("this is tic tac toe you can either be x or o,\n if you get three x's or o's in a row you win")
   
   end
   
@@ -73,6 +73,7 @@ local player_turn = 1
 
 local game_over = true
 
+print_board(new_board)
 
 while not game_over do
 
