@@ -10,6 +10,7 @@ function put_x(board, row, col)
 end
 
 function put_o(board, row, col)
+  board[row][col] = " "
   board[row][col] = "o"
 end
 
