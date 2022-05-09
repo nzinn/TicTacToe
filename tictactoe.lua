@@ -24,6 +24,14 @@ end
 function check_winner()
 end
 
+
+function print_winner(winner)
+
+end
+
+
+
+
 function print_board(board)
    for row  = 1, 3 do
       for col = 1, 3 do
@@ -67,12 +75,12 @@ while not game_over do
 
 
    --returns 1 if player one wins, 2 if player 2, and false if nobody wins
-   winner = check_winner()
-
-   
-  
-   
+   game_over = check_winner()
 
 
 end
+
+
+print_winner(game_over)
+
 
