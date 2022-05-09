@@ -32,6 +32,7 @@ function print_board(board)
       end
 
       io.write("\n")
+      
       if row ~= 3 then
 	 io.write("-----")
       end
@@ -63,9 +64,10 @@ while not game_over do
 
 
 
-   --returns 1 if player one wins, 2 if player 2, and false if nobody
+   --returns 1 if player one wins, 2 if player 2, and false if nobody wins
    winner = check_winner()
 
+   
   
    
 
