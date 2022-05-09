@@ -95,4 +95,6 @@ end
 
 print_winner(game_over)
 
+print("goodbye!")
+
 
