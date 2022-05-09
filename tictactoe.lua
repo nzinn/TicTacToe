@@ -17,15 +17,13 @@ end
 function play_turn(player_turn)
   end
 
-function print_winner(player)
-end
 
 
 function check_winner()
 end
 
 
-function print_winner(winner)
+function print_winner(player)
 
 end
 
