@@ -15,7 +15,9 @@ end
 
 
 function play_turn(player_turn)
-  
+  end
+
+function print_winner(player)
 end
 
 
