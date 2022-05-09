@@ -63,9 +63,6 @@ end
 
 
 
-
-
-
 local player_turn = 1
 
 
