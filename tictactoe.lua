@@ -19,9 +19,20 @@ function put_o(board, row, col)
 end
 
 
-function play_turn(player_turn)
+function play_turn(board, is_x_turn)
    print("player " .. player_turn .. ", it's you're turn!")
 
+   print("input row! (1 2 3)")
+   local row = io.read()
+   
+   print("input column! (1 2 3)")
+   local column = io.read()
+
+   if is_x_turn then
+      put_x(board, row, column)
+   else
+      put_o(board, row, column)
+   end   
 end
 
 
@@ -71,7 +82,7 @@ end
 
 
 
-local player_turn = 1
+local is_xplayer_turn = true
 
 
 local game_over = true
@@ -82,9 +93,10 @@ while not game_over do
 
 
    
-   play_turn(player_turn)
+   play_turn(new_board, is_xplayer_turn)
 
-
+   is_xplayer_turn = not is_xplayer_turn
+   
 
 
    --returns 1 if player one wins, 2 if player 2, and false if nobody wins
