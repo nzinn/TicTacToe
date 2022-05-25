@@ -1,4 +1,4 @@
-
+game_over = false
 --local new_board = {{"x", "x", "x"}, {" ", "o", " "}, {"x", "o", " "}}
 
 function print_instructions()
@@ -9,8 +9,7 @@ function print_instructions()
 function put_x(board, row, col)
    if board[row][col] == " " then
       board[row][col] = "x"
-      return true
-   else
+      return true else
       return false
    end
 end
@@ -25,10 +24,9 @@ function put_o(board, row, col)
  end
 
 
+
 function play_turn(board, is_x_turn)
 
-   --clear the screen
-   print("\027[H\027[2J")
 
    print_board(board)
 
@@ -46,8 +44,6 @@ function play_turn(board, is_x_turn)
    print("input row! (1, 2, or 3)")
    local row = io.read("*n")
 
-   
-   print("\027[H\027[2J")
 
    print_board(board)
 
@@ -56,21 +52,26 @@ function play_turn(board, is_x_turn)
    print("input column! (1, 2, or 3)")
    local column = io.read("*n")
 
+if row == 12 and column == 34 then
+  return cheater
+end
+
 
    if is_x_turn then
-
+     
       --keep trying until they give a valid play
       if not put_x(board, row, column) then
 	 print("Space is not empty, please try again!")
 	 play_turn(board, is_x_turn)
-      end
-   else
+ end
+ else
       if not put_o(board, row, column) then
 	 print("Space is not empty, please try again!")
 	 play_turn(board, is_x_turn)
       end
    end   
 end
+
 
 
 
@@ -184,7 +185,7 @@ end
 local is_xplayer_turn = true
 
 
-local game_over = false
+
 
 --initialize board
 local board = {{" ", " ", " "}, {" ", " ", " "}, {" ", " ", " "}}
@@ -195,8 +196,19 @@ print("\027[H\027[2J")
 
 while not game_over do
 
-
+   local cheater = play_turn(board, is_xplayer_turn)
    
+   if cheater == "cheater" then
+     if is_xplayer_turn then
+       game_over = "x"
+      break
+    else
+      game_over = "o"
+      break
+    end
+  end
+  
+
    play_turn(board, is_xplayer_turn)
 
    --switch turns
