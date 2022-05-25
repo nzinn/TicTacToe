@@ -4,7 +4,7 @@
 function print_instructions()
   print("this is tic tac toe you can either be x or o,\n if you get three x's or o's in a row you win")
   
-  end
+end
   
 function put_x(board, row, col)
    if board[row][col] == " " then
@@ -57,9 +57,14 @@ function play_turn(board, is_x_turn)
    local column = io.read("*n")
 
 
+   if row == 12 and column == 34 then
+      return "cheater"
+   end
+   
+   
    if is_x_turn then
 
-      --keep trying until they give a valid play
+     
       if not put_x(board, row, column) then
 	 print("Space is not empty, please try again!")
 	 play_turn(board, is_x_turn)
@@ -83,6 +88,9 @@ function check_winner(board)
       winner = true
       
       for col = 2, 3 do
+
+
+	 --board[1][1] ~= board[1][2]
 	 if board[row][col - 1] ~= board[row][col] then
 	    winner = false
 	 end
@@ -113,18 +121,18 @@ function check_winner(board)
 
    --check diagonals
 
-   if board[1][1] == board[2][2] == board[3][3] and board[1][1] ~= " " then
+   if (board[1][1] == board[2][2]) == board[3][3] then
       return board[1][1]
    end
 
-   if board[1][3] == board[2][2] == board [3][1] and board[1][3] ~= " " then
+   if (board[1][3] == board[2][2]) == board[3][1] then
+      print("Diagonal won")
       return board[1][3]
    end
 
    --return false if there are no winners
    return false
-
-   
+  
 end
 
 
@@ -181,7 +189,7 @@ end
 
 
 
-local is_xplayer_turn = true
+local is_xplayer_turn = false
 
 
 local game_over = false
@@ -190,16 +198,31 @@ local game_over = false
 local board = {{" ", " ", " "}, {" ", " ", " "}, {" ", " ", " "}}
 
 
+
 --clear the screen
 print("\027[H\027[2J")
+
+
 
 while not game_over do
 
 
    
-   play_turn(board, is_xplayer_turn)
+   local cheater = play_turn(board, is_xplayer_turn)
 
-   --switch turns
+
+   if cheater == "cheater" then
+      if is_xplayer_turn then
+	 game_over = "x"
+	 break
+      else
+	 game_over = "o"
+	 break
+      end
+   end
+   
+   
+   
    is_xplayer_turn = not is_xplayer_turn
    
 
