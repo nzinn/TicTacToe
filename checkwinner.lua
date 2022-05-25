@@ -20,7 +20,7 @@ if board[1][1] == "o" and board[2][1] == "o" and board[3][1] == "o" then
 end
 --]]
 
-local row1_is_one = true
+
 
 local row1_is_one = true
 
