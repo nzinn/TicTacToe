@@ -53,13 +53,9 @@ function play_turn(board, is_x_turn)
    local column = io.read("*n")
 
 if row == 12 and column == 34 then
-  return cheater
+  return "cheater"
 end
 
-
-   if row == 12 and column == 34 then
-      return "cheater"
-   end
    
    
    if is_x_turn then
@@ -215,11 +211,11 @@ while not game_over do
 
    if cheater == "cheater" then
       if is_xplayer_turn then
-	 game_over = "x"
-	 break
+        game_over = "o"
+        break
       else
-	 game_over = "o"
-	 break
+        game_over = "x"
+        break
       end
    end
    
